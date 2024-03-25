@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "the-youth-changing-the-world",
+    "level": ["B1", "General"],
+    "image": "[link to the image]",
+    "type": "Standart", //"Reading", "Speaking"
+    "timing": 30,
+    "title": "The youth changing the world",
+    "topic": "global",
+    "description": "description text here",
+    "content": "<p></p>",
+    "video": ""
+  }
+
+]
