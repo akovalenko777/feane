@@ -1,0 +1,9 @@
+.tabs-wrapper {
+  .react-tabs__tab-list, 
+  .react-tabs__tab--selected {
+    border-color: #333;
+  }
+  .react-tabs__tab--selected {
+    border-radius: 10px 10px 0 0;
+  }
+}

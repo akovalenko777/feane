@@ -1,0 +1,52 @@
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  width: min(100%, 800px);
+  margin-inline: auto;
+  .video-splash {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      opacity: 0.5;
+      transition: all .2s ease;
+    }
+    &::before {
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      border-radius: 50%;
+      background-color: #ffc107;
+    }
+    &::after {
+      width: 0;
+      height: 0;
+      border-top: 35px solid transparent;
+      border-bottom: 35px solid transparent;
+      border-left: 50px solid #232323;
+      transform: translate(-34%, -50%);
+      z-index: 2;
+    }
+    &:hover {
+      &::before, &::after {
+        opacity: 0.9;
+      }
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+}

@@ -1,0 +1,89 @@
+.my-modal {
+  &-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: safe center;
+    justify-content: safe center;
+    background-color: rgba(#000, 0.7);
+    scale: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    z-index: 1000;
+    &.open {
+      scale: 1;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // box-shadow: 0 0 10px 10px #fff;
+  background-color: #fff;
+  border-radius: 20px 20px 15px 15px;
+  max-height: calc(100vh - 60px);
+  &.small {
+    width: min(96%, 400px);
+  }
+  &.middle {
+    width: min(96%, 600px);
+  }
+  &.large {
+    width: min(96%, 900px);
+  }
+  &-header {
+    background-color: #222831;
+    padding: 20px;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+  }
+  &-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  &-close {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      &:hover {
+        color: #f00;
+      }
+    }
+  }
+  &-body {
+    padding: 10px 10px 20px 20px;
+    border-radius: 0 0 15px 15px;
+  }
+  &-content {
+    padding: 10px 10px 0 0;
+    overflow: auto;
+    max-height: calc(100vh - 60px - 69px - 40px);
+    > *:last-child {
+      margin-bottom: 0;
+    }
+    scrollbar-width: thin;
+    scrollbar-color: #999;
+    &::-webkit-scrollbar {
+      width: 6px;
+      margin-right: 10px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background: #999;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 20px;
+    }
+  }
+}

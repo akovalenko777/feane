@@ -1,0 +1,43 @@
+.my-form-row {
+  position: relative;
+  margin-bottom: 8px;
+  input, select {
+    margin-bottom: 0;
+  }
+  .error-msg {
+    height: 17px;
+    color: red;
+    font-size: 12px;
+    padding-left: 25px;
+  }
+}
+input[type=text],
+input[type=email],
+input[type=date] {
+  &::placeholder {
+    color: transparent;
+  }
+  
+  // Hide Safari's autofill button
+  &::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+  }
+  &:focus + .label,
+  &:not(:placeholder-shown) + .label {
+    transform: translateY(-105%) scale(0.85);
+  }
+}
+
+.label {
+  position: absolute;
+  top: 13px;
+  left: 23px;
+  color: #222;
+  pointer-events: none;
+  transform-origin: left center;
+  transition: transform 250ms;
+  background-color: #fff;
+  padding: 0 3px;
+}

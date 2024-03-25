@@ -1,0 +1,89 @@
+.food_section {
+  .news-content {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .news-item,
+    .box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .img-box {
+        padding: 0;
+        overflow: hidden;
+        img {
+          max-height: none;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .options a {
+        width: auto;
+        border-radius: 20px;
+        padding: 0 10px;
+      }
+      .detail-box {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+        p {
+          height: 70px;
+          overflow: hidden;
+        }
+      } 
+    }
+    .pagination-wrap {
+      padding-top: 50px;
+      .pagination {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+$loaderWidth: 80px;
+$loaderBorder: 7px;
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(#fff, .7);
+  z-index: 10000;
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: $loaderWidth;
+    height: $loaderWidth;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border-top: $loaderBorder solid #222831;
+      border-right: $loaderBorder solid #ffbe33;
+      border-bottom: $loaderBorder solid #222831;
+      border-left: $loaderBorder solid #ffbe33;
+      animation: spin 2s infinite linear;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
