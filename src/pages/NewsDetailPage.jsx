@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import md5 from "md5";
 import './../assets/css/news.scss'
 import { toast } from "react-toastify";
+import Share from "../components/Share";
 
 export default function NewsDetailPage(){
   const params = useParams()
@@ -53,9 +54,11 @@ export default function NewsDetailPage(){
             <div className="content">
               {data.text}
             </div>
+            <Share title={data.title} image={data.image} description={data.text} />
           </>
         )}
         <Link to="/news">All News</Link>
+        
         </div>
       </section>
   </>

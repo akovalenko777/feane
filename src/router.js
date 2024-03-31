@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Layout from "./layout/Layout";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
@@ -76,4 +76,4 @@ export const routesList = [
   }
 ]
 
-export default createBrowserRouter(routesList)
+export default createHashRouter(routesList)

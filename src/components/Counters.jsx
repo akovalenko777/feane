@@ -21,8 +21,8 @@ export default function Counters(){
 
   return <div className="counters-block">
     <div className="container">
-      {arCounters.map(item => (
-        <div className="counter-item">
+      {arCounters.map((item, index) => (
+        <div className="counter-item" key={index}>
           <div className="value">
             <CountUp end={item.end} separator=" " duration="4" prefix={item.prefix} />
           </div>

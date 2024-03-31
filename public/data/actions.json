@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "image": "assets/images/o1.jpg",
+    "title": "Tasty Thursdays",
+    "discount": 20
+  },
+  {
+    "id": "2",
+    "image": "assets/images/o2.jpg",
+    "title": "<b>Pizza Days</b>",
+    "discount": 15
+  }
+]

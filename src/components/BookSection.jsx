@@ -4,7 +4,7 @@ import BookForm from "./BookForm"
 
 export default function BookSection(){
   return (
-    <section className="book_section layout_padding">
+    <section className="book_section layout_padding" id="book_section">
     <div className="container">
       <div className="heading_container">
         <h2>

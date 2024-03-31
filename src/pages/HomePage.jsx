@@ -1,3 +1,4 @@
+import ActionsLine from "../components/ActionsLine";
 import BookSection from "../components/BookSection";
 import Counters from "../components/Counters";
 import LazyVideo from "../components/LazyVideo";
@@ -12,6 +13,7 @@ export default function HomePage(){
   return <>
     <div className="container">
       <h1>Home</h1>
+      <ActionsLine />
       <button type="button" className="btn btn-warning" onClick={()=>{setIsOpen(true)}}>More info</button>
       <Mytabs />
       <br />
