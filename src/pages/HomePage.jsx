@@ -14,6 +14,7 @@ export default function HomePage(){
     <div className="container">
       <h1>Home</h1>
       <ActionsLine />
+      <hr />
       <button type="button" className="btn btn-warning" onClick={()=>{setIsOpen(true)}}>More info</button>
       <Mytabs />
       <br />
