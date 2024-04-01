@@ -20,16 +20,16 @@ export default function HomePage(){
 
   const faqList = [
     {
-      "q": "Lorem ipsum dolor sit?",
-      "a": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora hic minus obcaecati doloribus doloremque suscipit autem maiores quam incidunt modi reprehenderit similique aperiam aliquid ea aliquam perferendis nam, nisi quis!'
+      question: "Lorem ipsum dolor sit?",
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora hic minus obcaecati doloribus doloremque suscipit autem maiores quam incidunt modi reprehenderit similique aperiam aliquid ea aliquam perferendis nam, nisi quis!'
     },
     {
-      q: 'What harsh truths do you prefer to ignore?',
-      a: 'Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.'
+      question: 'What harsh truths do you prefer to ignore?',
+      answer: 'Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.'
     },
     {
-      q: 'Is free will real or just an illusion?',
-      a: 'In ad velit in ex nostrud dolore cupidatat consectetur ea in ut nostrud velit in irure cillum tempor laboris sed adipisicing eu esse duis nulla non.'
+      question: 'Is free will real or just an illusion?',
+      answer: 'In ad velit in ex nostrud dolore cupidatat consectetur ea in ut nostrud velit in irure cillum tempor laboris sed adipisicing eu esse duis nulla non.'
     }
   ]
 
@@ -42,12 +42,12 @@ export default function HomePage(){
           <AccordionItem key={index}>
               <AccordionItemHeading>
                   <AccordionItemButton>
-                      {item.q}
+                      {item.question}
                   </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
                   <p>
-                      {item.a}
+                      {item.answer}
                   </p>
               </AccordionItemPanel>
           </AccordionItem>
