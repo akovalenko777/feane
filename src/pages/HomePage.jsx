@@ -37,6 +37,8 @@ export default function HomePage(){
     <div className="container">
       <h1>Home</h1>
       <ActionsLine />
+
+      <hr />
       <Accordion>
         {faqList.map((item, index)=>(
           <AccordionItem key={index}>
