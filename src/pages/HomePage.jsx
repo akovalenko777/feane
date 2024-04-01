@@ -6,14 +6,54 @@ import Modal from "../components/Modal";
 import Mytabs from "../components/MyTabs";
 import WeAre from "../components/WeAre";
 import { useState } from "react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
 
 export default function HomePage(){
   const [isOpen, setIsOpen] = useState(false)
+
+  const faqList = [
+    {
+      "q": "Lorem ipsum dolor sit?",
+      "a": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora hic minus obcaecati doloribus doloremque suscipit autem maiores quam incidunt modi reprehenderit similique aperiam aliquid ea aliquam perferendis nam, nisi quis!'
+    },
+    {
+      q: 'What harsh truths do you prefer to ignore?',
+      a: 'Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.'
+    },
+    {
+      q: 'Is free will real or just an illusion?',
+      a: 'In ad velit in ex nostrud dolore cupidatat consectetur ea in ut nostrud velit in irure cillum tempor laboris sed adipisicing eu esse duis nulla non.'
+    }
+  ]
 
   return <>
     <div className="container">
       <h1>Home</h1>
       <ActionsLine />
+      <Accordion>
+        {faqList.map((item, index)=>(
+          <AccordionItem key={index}>
+              <AccordionItemHeading>
+                  <AccordionItemButton>
+                      {item.q}
+                  </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                  <p>
+                      {item.a}
+                  </p>
+              </AccordionItemPanel>
+          </AccordionItem>
+        ))}
+            
+        </Accordion>
       <button type="button" className="btn btn-warning" onClick={()=>{setIsOpen(true)}}>More info</button>
       <Mytabs />
       <br />
