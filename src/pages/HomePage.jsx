@@ -37,7 +37,15 @@ export default function HomePage(){
     <div className="container">
       <h1>Home</h1>
       <ActionsLine />
-      <button type="button">Hello!!!!</button>
+      <button type="button">Hello!!!!</button>      
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eos facilis sunt cumque eligendi, unde consequatur? Totam repellendus doloribus excepturi impedit, repudiandae aliquam soluta ut aspernatur sequi dolore, beatae fugit!</p>
+      <br />
+      <br />
+      <ul>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+      </ul>
       <hr />
       <Accordion>
         {faqList.map((item, index)=>(
